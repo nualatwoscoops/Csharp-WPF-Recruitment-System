@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36623.8 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recruitment App Assignment", "Recruitment App Assignment\Recruitment App Assignment.csproj", "{713FAD31-B769-48C3-AE4C-8891D777841F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{713FAD31-B769-48C3-AE4C-8891D777841F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{713FAD31-B769-48C3-AE4C-8891D777841F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{713FAD31-B769-48C3-AE4C-8891D777841F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{713FAD31-B769-48C3-AE4C-8891D777841F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A6A651C2-68B7-4EF7-A9B6-8E21BC0EE4DE}
+	EndGlobalSection
+EndGlobal

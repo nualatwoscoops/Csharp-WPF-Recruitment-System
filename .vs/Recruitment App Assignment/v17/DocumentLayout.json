@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Nuala\\Desktop\\Course\\c#\\Assessment 2\\NM_Recruit_Assignment\\Recruitment App Assignment\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{713FAD31-B769-48C3-AE4C-8891D777841F}|Recruitment App Assignment\\Recruitment App Assignment.csproj|c:\\users\\nuala\\desktop\\course\\c#\\assessment 2\\nm_recruit_assignment\\recruitment app assignment\\recruitment app assignment\\data\\recruitmentsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{713FAD31-B769-48C3-AE4C-8891D777841F}|Recruitment App Assignment\\Recruitment App Assignment.csproj|solutionrelative:recruitment app assignment\\data\\recruitmentsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{713FAD31-B769-48C3-AE4C-8891D777841F}|Recruitment App Assignment\\Recruitment App Assignment.csproj|c:\\users\\nuala\\desktop\\course\\c#\\assessment 2\\nm_recruit_assignment\\recruitment app assignment\\recruitment app assignment\\recruitment app assignment.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{713FAD31-B769-48C3-AE4C-8891D777841F}|Recruitment App Assignment\\Recruitment App Assignment.csproj|solutionrelative:recruitment app assignment\\recruitment app assignment.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{713FAD31-B769-48C3-AE4C-8891D777841F}|Recruitment App Assignment\\Recruitment App Assignment.csproj|c:\\users\\nuala\\desktop\\course\\c#\\assessment 2\\nm_recruit_assignment\\recruitment app assignment\\recruitment app assignment\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{713FAD31-B769-48C3-AE4C-8891D777841F}|Recruitment App Assignment\\Recruitment App Assignment.csproj|solutionrelative:recruitment app assignment\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{713FAD31-B769-48C3-AE4C-8891D777841F}|Recruitment App Assignment\\Recruitment App Assignment.csproj|c:\\users\\nuala\\desktop\\course\\c#\\assessment 2\\nm_recruit_assignment\\recruitment app assignment\\recruitment app assignment\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{713FAD31-B769-48C3-AE4C-8891D777841F}|Recruitment App Assignment\\Recruitment App Assignment.csproj|solutionrelative:recruitment app assignment\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RecruitmentSystem.cs",
+              "DocumentMoniker": "C:\\Users\\Nuala\\Desktop\\Course\\c#\\Assessment 2\\NM_Recruit_Assignment\\Recruitment App Assignment\\Recruitment App Assignment\\Data\\RecruitmentSystem.cs",
+              "RelativeDocumentMoniker": "Recruitment App Assignment\\Data\\RecruitmentSystem.cs",
+              "ToolTip": "C:\\Users\\Nuala\\Desktop\\Course\\c#\\Assessment 2\\NM_Recruit_Assignment\\Recruitment App Assignment\\Recruitment App Assignment\\Data\\RecruitmentSystem.cs",
+              "RelativeToolTip": "Recruitment App Assignment\\Data\\RecruitmentSystem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T13:56:04.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Recruitment App Assignment.csproj",
+              "DocumentMoniker": "C:\\Users\\Nuala\\Desktop\\Course\\c#\\Assessment 2\\NM_Recruit_Assignment\\Recruitment App Assignment\\Recruitment App Assignment\\Recruitment App Assignment.csproj",
+              "RelativeDocumentMoniker": "Recruitment App Assignment\\Recruitment App Assignment.csproj",
+              "ToolTip": "C:\\Users\\Nuala\\Desktop\\Course\\c#\\Assessment 2\\NM_Recruit_Assignment\\Recruitment App Assignment\\Recruitment App Assignment\\Recruitment App Assignment.csproj",
+              "RelativeToolTip": "Recruitment App Assignment\\Recruitment App Assignment.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-29T13:55:01.699Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Nuala\\Desktop\\Course\\c#\\Assessment 2\\NM_Recruit_Assignment\\Recruitment App Assignment\\Recruitment App Assignment\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Recruitment App Assignment\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Nuala\\Desktop\\Course\\c#\\Assessment 2\\NM_Recruit_Assignment\\Recruitment App Assignment\\Recruitment App Assignment\\MainWindow.xaml",
+              "RelativeToolTip": "Recruitment App Assignment\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-29T13:46:56.582Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Nuala\\Desktop\\Course\\c#\\Assessment 2\\NM_Recruit_Assignment\\Recruitment App Assignment\\Recruitment App Assignment\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Recruitment App Assignment\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Nuala\\Desktop\\Course\\c#\\Assessment 2\\NM_Recruit_Assignment\\Recruitment App Assignment\\Recruitment App Assignment\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Recruitment App Assignment\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T13:46:52.531Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
