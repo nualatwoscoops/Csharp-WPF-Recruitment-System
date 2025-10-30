@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Linq;
+using System.Printing;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Navigation;
@@ -33,6 +35,42 @@ namespace Recruitment_App_Assignment.Data
             AllJobs.Add(newJob);
         }
 
+        public void CompleteJob(Job jobToComplete)
+        {
+            jobToComplete.IsCompleted = true;
+                if (jobToComplete.AssignedWorker != null)
+            {
+                jobToComplete.AssignedWorker.IsAvailable = true;
+            }
+        }
+
+        public List<Contractor> GetAvailableContractors()
+        {
+            List<Contractor> availableContractors = new List<Contractor>();
+
+            foreach (Contractor contractor in AllContractors)
+            { 
+                if (contractor.IsAvailable == true) 
+                {
+                    availableContractors.Add(contractor);
+                }
+            }
+            return availableContractors; 
+        }
+
+        public List<Job> GetUnassignedJobs()
+        {
+            List<Job> unassignedJobs = new List<Job>();
+
+            foreach (Job job in AllJobs)
+            {
+                if(job.AssignedWorker == true)
+                {  
+                    unassignedJobs.Add(job); 
+                }
+            }
+            return unassignedJobs;
+        }
         public Contractor Search (int id) 
         { 
             for (int i=0;i<AllContractors.Count;++i) 
@@ -44,5 +82,14 @@ namespace Recruitment_App_Assignment.Data
             }
             return null;    
         }
+
+        //FindAll will go through all and find all true - can change to cost later
+        
+        public List<Contractor> Search (string name)
+        {
+            return contractor.FindAll((x)=> { return x.ToString().Contains(name);  });
+        }
+
+        //Use above for SearchJobsbyCost #8
     }
 }
