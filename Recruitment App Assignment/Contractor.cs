@@ -8,12 +8,15 @@ using System.Threading.Tasks;
 /// <summary>
 /// Initializes a new instance of the Contractor class
 /// </summary>
-class Contractor
+public class Contractor
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public DateTime StartDate { get; set; }
         public decimal HourlyRate { get; set; }
+        public bool IsAssigned { get; set; }
+
+        public Contractor() { }
 
         public Contractor(string firstName, string lastName, DateTime startDate, decimal rate)
         {
@@ -21,6 +24,7 @@ class Contractor
             LastName = lastName;
             StartDate = startDate;
             HourlyRate = rate;
+            IsAssigned = false;
         }
         
 

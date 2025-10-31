@@ -28,6 +28,6 @@
 
         <!-- View Contractors and Load -->
         <ListBox x:Name="Contractors_ListBox" HorizontalAlignment="Left" Height="278" Margin="300,10,0,0" VerticalAlignment="Top" Width="255"/>
-        <Button x:Name="Button_Load_Contractors" Content="Load Contractors" HorizontalAlignment="Left" Margin="335,293,0,0" VerticalAlignment="Top" Width="185" Height="27" Click="Button_Load_People_Click"/>
+        <Button x:Name="Button_Load_Contractors" Content="Load Contractors" HorizontalAlignment="Left" Margin="335,293,0,0" VerticalAlignment="Top" Width="185" Height="27" Click="Button_Load_Contractors_Click"/>
 </Grid>
 </Window>
