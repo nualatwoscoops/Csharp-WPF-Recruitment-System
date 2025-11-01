@@ -1,7 +1,7 @@
-C:\Users\Nuala\Desktop\Course\c#\Assessment 2\NM_Recruit_Assignment\Recruitment App Assignment\Recruitment App Assignment\obj\Debug\net8.0-windows\App.g.cs
-C:\Users\Nuala\Desktop\Course\c#\Assessment 2\NM_Recruit_Assignment\Recruitment App Assignment\Recruitment App Assignment\obj\Debug\net8.0-windows\Recruitment App Assignment_MarkupCompile.cache
 C:\Users\Nuala\Desktop\Course\c#\Assessment 2\NM_Recruit_Assignment\Recruitment App Assignment\Recruitment App Assignment\obj\Debug\net8.0-windows\MainWindow.baml
 C:\Users\Nuala\Desktop\Course\c#\Assessment 2\NM_Recruit_Assignment\Recruitment App Assignment\Recruitment App Assignment\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\Nuala\Desktop\Course\c#\Assessment 2\NM_Recruit_Assignment\Recruitment App Assignment\Recruitment App Assignment\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\Nuala\Desktop\Course\c#\Assessment 2\NM_Recruit_Assignment\Recruitment App Assignment\Recruitment App Assignment\obj\Debug\net8.0-windows\Recruitment App Assignment_MarkupCompile.cache
 C:\Users\Nuala\Desktop\Course\c#\Assessment 2\NM_Recruit_Assignment\Recruitment App Assignment\Recruitment App Assignment\obj\Debug\net8.0-windows\Recruitment App Assignment.g.resources
 C:\Users\Nuala\Desktop\Course\c#\Assessment 2\NM_Recruit_Assignment\Recruitment App Assignment\Recruitment App Assignment\obj\Debug\net8.0-windows\Recruitment App Assignment.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Nuala\Desktop\Course\c#\Assessment 2\NM_Recruit_Assignment\Recruitment App Assignment\Recruitment App Assignment\obj\Debug\net8.0-windows\Recruitment App Assignment.AssemblyInfoInputs.cache

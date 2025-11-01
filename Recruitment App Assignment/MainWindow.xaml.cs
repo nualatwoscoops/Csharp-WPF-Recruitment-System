@@ -1,5 +1,6 @@
 ﻿using Recruitment_App_Assignment.Data;
 using System;
+using System.Diagnostics.Contracts;
 using System.Security.Claims;
 using System.Text;
 using System.Windows;
@@ -23,22 +24,26 @@ namespace Recruitment_App_Assignment
     /// </summary>
     public partial class MainWindow : Window
     {
-        RecruitmentSystem manager;
+        private RecruitmentSystem manager;
 
-        public MainWindow()
-        {
-            InitializeComponent();
-            Contractors_ListBox.ItemsSource = manager.GetAllContractors();
-            
-        }
         public List<decimal> StandardHourlyRates { get; } = new List<decimal>
-        {
-            50.00m, 
+            {
+            00.00m,
+            50.00m,
             60.00m,
             75.00m,
             100.00m
-        };
+            };
+        public MainWindow()
+        {
+            manager = new RecruitmentSystem();
 
+            InitializeComponent();
+
+            this.DataContext = this;
+
+                        
+        }
         private void Button_AddContractor_Click(object sender, RoutedEventArgs e)
         {
             Contractor newContractor = new Contractor();
@@ -58,6 +63,19 @@ namespace Recruitment_App_Assignment
             //{
             //    Contractors_ListBox.Items.Add(contractor);
             //}
+        }
+
+        private void Button_Remove_Contractors_Click(object sender, RoutedEventArgs e)
+        {
+            object selectedItem = Contractors_ListBox.SelectedItem;
+            if (Contractors_ListBox.SelectedItem is Contractor selectedContractor)
+            {
+                manager.RemoveContractor(selectedContractor);
+            }
+            else 
+            {
+                MessageBox.Show("Please select a contractor to remove first.", "Selection Required", MessageBoxButton.OK, MessageBoxImage.Warning); ;
+            }
         }
     }
 }

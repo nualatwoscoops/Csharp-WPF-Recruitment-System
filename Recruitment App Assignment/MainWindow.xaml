@@ -7,27 +7,31 @@
         Title="NuCorp Contractor Recruitment Management System" Height="439" Width="600"
         FontSize="12">
 
-    <Grid Margin="0,0,63,83">
+    <Grid Margin="0,0,0,-6">
         <!-- ====================== -->
         <!-- Add Contractor Section -->
         <!-- ====================== -->
-        <Label Content="Add Contractor" FontWeight="Bold" FontSize="14" Margin="10,10,0,299" HorizontalAlignment="Left"/>
-       
+        <Label Content="Add Contractor" FontWeight="Bold" FontSize="10" Margin="0,0,0,311" HorizontalAlignment="Left" Width="108"/>
+
         <!-- Add Contractor Data -->
-        <Label Content="First Name:" HorizontalAlignment="Left" Margin="74,71,0,0" VerticalAlignment="Top"/>
-        <Label Content="Last Name:" HorizontalAlignment="Left" Margin="74,102,0,0" VerticalAlignment="Top"/>
-        <Label Content="Start Date:" HorizontalAlignment="Left" Margin="74,142,0,0" VerticalAlignment="Top"/>
-        <Label Content="Hourly Rate ($):" HorizontalAlignment="Left" Margin="51,190,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="FirstNameBox" HorizontalAlignment="Left" Height="23" Margin="149,74,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="LastNameBox" HorizontalAlignment="Left" Height="23" Margin="149,106,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <DatePicker x:Name="StartDatePicker" HorizontalAlignment="Left" Margin="149,142,0,0" VerticalAlignment="Top" Height="35" Width="120"/>
-        <ComboBox x:Name="HourlyRate_ComboBox" HorizontalAlignment="Left" Margin="149,190,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="First Name:" HorizontalAlignment="Left" Margin="28,25,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.297,-0.928"/>
+        <Label Content="Last Name:" HorizontalAlignment="Left" Margin="29,55,0,0" VerticalAlignment="Top"/>
+        <Label Content="Start Date:" HorizontalAlignment="Left" Margin="32,99,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.58,-1.118"/>
+        <Label Content="Hourly Rate ($):" HorizontalAlignment="Left" Margin="5,136,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="FirstNameBox" HorizontalAlignment="Left" Height="32" Margin="102,25,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="119"/>
+        <TextBox x:Name="LastNameBox" HorizontalAlignment="Left" Height="23" Margin="102,62,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="119"/>
+        <DatePicker x:Name="StartDatePicker" HorizontalAlignment="Left" Margin="102,96,0,0" VerticalAlignment="Top" Height="35" Width="119"/>
+        <ComboBox x:Name="HourlyRate_ComboBox" HorizontalAlignment="Left" Margin="102,138,0,0" VerticalAlignment="Top" Width="119" ItemsSource="{Binding StandardHourlyRates}" SelectedIndex="0"/>
 
         <!-- Button to Add Contractor -->
-        <Button x:Name="Button_AddContractor" Content="Add Contractor" HorizontalAlignment="Left" Margin="149,233,0,0" VerticalAlignment="Top" Width="120" Click="Button_AddContractor_Click"/>
+        <Button x:Name="Button_AddContractor" Content="Add Contractor" HorizontalAlignment="Left" Margin="102,170,0,0" VerticalAlignment="Top" Width="119" Click="Button_AddContractor_Click" Height="27"/>
 
         <!-- View Contractors and Load -->
-        <ListBox x:Name="Contractors_ListBox" HorizontalAlignment="Left" Height="278" Margin="300,10,0,0" VerticalAlignment="Top" Width="255"/>
-        <Button x:Name="Button_Load_Contractors" Content="Load Contractors" HorizontalAlignment="Left" Margin="335,293,0,0" VerticalAlignment="Top" Width="185" Height="27" Click="Button_Load_Contractors_Click"/>
-</Grid>
+        <ListBox x:Name="Contractors_ListBox" HorizontalAlignment="Left" Height="152" Margin="240,10,0,0" VerticalAlignment="Top" Width="350"/>
+        <Button x:Name="Button_Load_Contractors" Content="Load Contractors" HorizontalAlignment="Left" Margin="240,170,0,0" VerticalAlignment="Top" Width="156" Height="27" Click="Button_Load_Contractors_Click"/>
+
+        <!-- Remove Contractor -->
+        <Button x:Name="Button_Remove_Contractors" Content="Remove Contractors" HorizontalAlignment="Right" Margin="0,170,10,0" VerticalAlignment="Top" Width="185" Height="27" Click="Button_Remove_Contractors_Click"/>
+
+    </Grid>
 </Window>
