@@ -90,9 +90,14 @@ namespace Recruitment_App_Assignment
             Job newJob = new Job();
             newJob.JobID = nextJobID++;
             newJob.JobTitle = jobTitle; 
-            newJob.AgreedCost = agreedCost; ;
+            newJob.AgreedCost = agreedCost; 
+
+            manager.AddJob(newJob);
+            Jobs_ListBox.ItemsSource = manager.AllJobs;
 
         }
+
+        private void
 
     }
 }

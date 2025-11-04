@@ -4,10 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="NuCorp Contractor Recruitment Management System" Height="439" Width="600"
+        Title="NuCorp Contractor Recruitment Management System" Height="539" Width="600"
         FontSize="12">
-
+    <!-- === CONTRACTOR MANAGEMENT === -->
     <Grid Margin="0,0,0,-6">
+        
+        <!-- Adding a new contractor inputs -->
         <Label Content="Add Contractor" FontWeight="Bold" FontSize="10" Margin="0,0,0,311" HorizontalAlignment="Left" Width="108"/>
         <Label Content="First Name:" HorizontalAlignment="Left" Margin="28,25,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.297,-0.928"/>
         <Label Content="Last Name:" HorizontalAlignment="Left" Margin="29,55,0,0" VerticalAlignment="Top"/>
@@ -18,10 +20,15 @@
         <DatePicker x:Name="StartDatePicker" HorizontalAlignment="Left" Margin="102,96,0,0" VerticalAlignment="Top" Height="35" Width="119"/>
         <ComboBox x:Name="HourlyRate_ComboBox" HorizontalAlignment="Left" Margin="102,138,0,0" VerticalAlignment="Top" Width="119" ItemsSource="{Binding StandardHourlyRates}" SelectedIndex="0"/>
         <Button x:Name="Button_AddContractor" Content="Add Contractor" HorizontalAlignment="Left" Margin="102,170,0,0" VerticalAlignment="Top" Width="119" Click="Button_AddContractor_Click" Height="27"/>
+
+        <!-- List contractors box -->
         <ListBox x:Name="Contractors_ListBox" HorizontalAlignment="Left" Height="152" Margin="240,10,0,0" VerticalAlignment="Top" Width="350"/>
+        
+        <!-- Load and remove contractor inputs -->
         <Button x:Name="Button_Load_Contractors" Content="Load Contractors" HorizontalAlignment="Left" Margin="240,170,0,0" VerticalAlignment="Top" Width="156" Height="27" Click="Button_Load_Contractors_Click"/>
         <Button x:Name="Button_Remove_Contractors" Content="Remove Contractors" HorizontalAlignment="Right" Margin="0,170,10,0" VerticalAlignment="Top" Width="185" Height="27" Click="Button_Remove_Contractors_Click"/>
 
+        <!-- === JOB MANAGEMENT === -->
         <StackPanel HorizontalAlignment="Left" 
             Margin="5,210,0,0" 
             VerticalAlignment="Top" 
@@ -36,6 +43,7 @@
 
                 <Label Content="Job Title:" Width="80" VerticalAlignment="Center"/>
 
+                <!-- Add new job inputs -->
                 <TextBox x:Name="JobTitleBox" 
                  Width="132" 
                  TextWrapping="Wrap" 
@@ -52,7 +60,7 @@
                  Height="23"/>
             </StackPanel>
 
-
+            <!-- Add new job button -->
             <Button x:Name="Button_AddJob" 
             Content="Add New Job" 
             HorizontalAlignment="Left" 
@@ -60,6 +68,9 @@
             Height="27"
             Click="Button_AddJob_Click"
             Margin="0,5,0,10"/>
+            
+            <!-- Job List View-->
+            <ListBox x:Name="Jobs_ListBox" HorizontalAlignment="Left" Width="211" Height="140" Margin="0,5,0,500"/>
 
         </StackPanel>
     </Grid>
