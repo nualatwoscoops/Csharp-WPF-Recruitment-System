@@ -77,5 +77,22 @@ namespace Recruitment_App_Assignment
                 MessageBox.Show("Please select a contractor to remove first.", "Selection Required", MessageBoxButton.OK, MessageBoxImage.Warning); ;
             }
         }
+
+        public List<Job> JobList = new List<Job>();
+
+        private int nextJobID = 1;
+        private void Button_AddJob_Click(object sender, RoutedEventArgs e)
+        {
+            string jobTitle = JobTitleBox.Text.Trim();
+            string costText = AgreedCostBox.Text.Trim();
+            decimal agreedCost = 0;
+
+            Job newJob = new Job();
+            newJob.JobID = nextJobID++;
+            newJob.JobTitle = jobTitle; 
+            newJob.AgreedCost = agreedCost; ;
+
+        }
+
     }
 }

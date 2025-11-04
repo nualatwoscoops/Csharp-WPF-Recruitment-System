@@ -8,30 +8,59 @@
         FontSize="12">
 
     <Grid Margin="0,0,0,-6">
-        <!-- ====================== -->
-        <!-- Add Contractor Section -->
-        <!-- ====================== -->
         <Label Content="Add Contractor" FontWeight="Bold" FontSize="10" Margin="0,0,0,311" HorizontalAlignment="Left" Width="108"/>
-
-        <!-- Add Contractor Data -->
         <Label Content="First Name:" HorizontalAlignment="Left" Margin="28,25,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.297,-0.928"/>
         <Label Content="Last Name:" HorizontalAlignment="Left" Margin="29,55,0,0" VerticalAlignment="Top"/>
         <Label Content="Start Date:" HorizontalAlignment="Left" Margin="32,99,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.58,-1.118"/>
         <Label Content="Hourly Rate ($):" HorizontalAlignment="Left" Margin="5,136,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="FirstNameBox" HorizontalAlignment="Left" Height="32" Margin="102,25,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="119"/>
-        <TextBox x:Name="LastNameBox" HorizontalAlignment="Left" Height="23" Margin="102,62,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="119"/>
+        <TextBox x:Name="FirstNameBox" HorizontalAlignment="Left" Height="26" Margin="102,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119"/>
+        <TextBox x:Name="LastNameBox" HorizontalAlignment="Left" Height="26" Margin="102,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119"/>
         <DatePicker x:Name="StartDatePicker" HorizontalAlignment="Left" Margin="102,96,0,0" VerticalAlignment="Top" Height="35" Width="119"/>
         <ComboBox x:Name="HourlyRate_ComboBox" HorizontalAlignment="Left" Margin="102,138,0,0" VerticalAlignment="Top" Width="119" ItemsSource="{Binding StandardHourlyRates}" SelectedIndex="0"/>
-
-        <!-- Button to Add Contractor -->
         <Button x:Name="Button_AddContractor" Content="Add Contractor" HorizontalAlignment="Left" Margin="102,170,0,0" VerticalAlignment="Top" Width="119" Click="Button_AddContractor_Click" Height="27"/>
-
-        <!-- View Contractors and Load -->
         <ListBox x:Name="Contractors_ListBox" HorizontalAlignment="Left" Height="152" Margin="240,10,0,0" VerticalAlignment="Top" Width="350"/>
         <Button x:Name="Button_Load_Contractors" Content="Load Contractors" HorizontalAlignment="Left" Margin="240,170,0,0" VerticalAlignment="Top" Width="156" Height="27" Click="Button_Load_Contractors_Click"/>
-
-        <!-- Remove Contractor -->
         <Button x:Name="Button_Remove_Contractors" Content="Remove Contractors" HorizontalAlignment="Right" Margin="0,170,10,0" VerticalAlignment="Top" Width="185" Height="27" Click="Button_Remove_Contractors_Click"/>
 
+        <StackPanel HorizontalAlignment="Left" 
+            Margin="5,210,0,0" 
+            VerticalAlignment="Top" 
+            Width="216">
+
+            <Label Content="Job Management" 
+            FontWeight="Bold" 
+            FontSize="14" 
+            Margin="0,0,0,5"/>
+
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,5">
+
+                <Label Content="Job Title:" Width="80" VerticalAlignment="Center"/>
+
+                <TextBox x:Name="JobTitleBox" 
+                 Width="132" 
+                 TextWrapping="Wrap" 
+                 Height="23"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,10">
+                
+                <Label Content="Agreed Cost ($):" Width="100" VerticalAlignment="Center"/>
+                
+                <TextBox x:Name="AgreedCostBox" 
+                 Width="113" 
+                 TextWrapping="Wrap" 
+                 Height="23"/>
+            </StackPanel>
+
+
+            <Button x:Name="Button_AddJob" 
+            Content="Add New Job" 
+            HorizontalAlignment="Left" 
+            Width="120"
+            Height="27"
+            Click="Button_AddJob_Click"
+            Margin="0,5,0,10"/>
+
+        </StackPanel>
     </Grid>
 </Window>

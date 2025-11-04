@@ -3,27 +3,27 @@
   "WorkspaceRootPath": "C:\\Users\\Nuala\\Desktop\\Course\\c#\\Assessment 2\\NM_Recruit_Assignment\\Recruitment App Assignment\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{713FAD31-B769-48C3-AE4C-8891D777841F}|Recruitment App Assignment\\Recruitment App Assignment.csproj|c:\\users\\nuala\\desktop\\course\\c#\\assessment 2\\nm_recruit_assignment\\recruitment app assignment\\recruitment app assignment\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{713FAD31-B769-48C3-AE4C-8891D777841F}|Recruitment App Assignment\\Recruitment App Assignment.csproj|solutionrelative:recruitment app assignment\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{713FAD31-B769-48C3-AE4C-8891D777841F}|Recruitment App Assignment\\Recruitment App Assignment.csproj|c:\\users\\nuala\\desktop\\course\\c#\\assessment 2\\nm_recruit_assignment\\recruitment app assignment\\recruitment app assignment\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{713FAD31-B769-48C3-AE4C-8891D777841F}|Recruitment App Assignment\\Recruitment App Assignment.csproj|solutionrelative:recruitment app assignment\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{713FAD31-B769-48C3-AE4C-8891D777841F}|Recruitment App Assignment\\Recruitment App Assignment.csproj|c:\\users\\nuala\\desktop\\course\\c#\\assessment 2\\nm_recruit_assignment\\recruitment app assignment\\recruitment app assignment\\recruitmentsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{713FAD31-B769-48C3-AE4C-8891D777841F}|Recruitment App Assignment\\Recruitment App Assignment.csproj|solutionrelative:recruitment app assignment\\recruitmentsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{713FAD31-B769-48C3-AE4C-8891D777841F}|Recruitment App Assignment\\Recruitment App Assignment.csproj|c:\\users\\nuala\\desktop\\course\\c#\\assessment 2\\nm_recruit_assignment\\recruitment app assignment\\recruitment app assignment\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{713FAD31-B769-48C3-AE4C-8891D777841F}|Recruitment App Assignment\\Recruitment App Assignment.csproj|solutionrelative:recruitment app assignment\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{713FAD31-B769-48C3-AE4C-8891D777841F}|Recruitment App Assignment\\Recruitment App Assignment.csproj|c:\\users\\nuala\\desktop\\course\\c#\\assessment 2\\nm_recruit_assignment\\recruitment app assignment\\recruitment app assignment\\job.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{713FAD31-B769-48C3-AE4C-8891D777841F}|Recruitment App Assignment\\Recruitment App Assignment.csproj|solutionrelative:recruitment app assignment\\job.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{713FAD31-B769-48C3-AE4C-8891D777841F}|Recruitment App Assignment\\Recruitment App Assignment.csproj|c:\\users\\nuala\\desktop\\course\\c#\\assessment 2\\nm_recruit_assignment\\recruitment app assignment\\recruitment app assignment\\contractor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{713FAD31-B769-48C3-AE4C-8891D777841F}|Recruitment App Assignment\\Recruitment App Assignment.csproj|solutionrelative:recruitment app assignment\\contractor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Nuala\\AppData\\Local\\SourceServer\\40fc69e6e8424ddac55e18388415886d492de592f86a98b63592a7e9d3c50801\\src\\coreclr\\System.Private.CoreLib\\src\\System\\RuntimeType.CoreCLR.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{713FAD31-B769-48C3-AE4C-8891D777841F}|Recruitment App Assignment\\Recruitment App Assignment.csproj|c:\\users\\nuala\\desktop\\course\\c#\\assessment 2\\nm_recruit_assignment\\recruitment app assignment\\recruitment app assignment\\recruitmentsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{713FAD31-B769-48C3-AE4C-8891D777841F}|Recruitment App Assignment\\Recruitment App Assignment.csproj|solutionrelative:recruitment app assignment\\recruitmentsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{713FAD31-B769-48C3-AE4C-8891D777841F}|Recruitment App Assignment\\Recruitment App Assignment.csproj|c:\\users\\nuala\\desktop\\course\\c#\\assessment 2\\nm_recruit_assignment\\recruitment app assignment\\recruitment app assignment\\job.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{713FAD31-B769-48C3-AE4C-8891D777841F}|Recruitment App Assignment\\Recruitment App Assignment.csproj|solutionrelative:recruitment app assignment\\job.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Nuala\\AppData\\Local\\SourceServer\\40fc69e6e8424ddac55e18388415886d492de592f86a98b63592a7e9d3c50801\\src\\coreclr\\System.Private.CoreLib\\src\\System\\RuntimeType.CoreCLR.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{713FAD31-B769-48C3-AE4C-8891D777841F}|Recruitment App Assignment\\Recruitment App Assignment.csproj|c:\\users\\nuala\\desktop\\course\\c#\\assessment 2\\nm_recruit_assignment\\recruitment app assignment\\recruitment app assignment\\recruitment app assignment.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -37,11 +37,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Nuala\\Desktop\\Course\\c#\\Assessment 2\\NM_Recruit_Assignment\\Recruitment App Assignment\\Recruitment App Assignment\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Recruitment App Assignment\\MainWindow.xaml",
@@ -54,13 +54,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Nuala\\Desktop\\Course\\c#\\Assessment 2\\NM_Recruit_Assignment\\Recruitment App Assignment\\Recruitment App Assignment\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "Recruitment App Assignment\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\Nuala\\Desktop\\Course\\c#\\Assessment 2\\NM_Recruit_Assignment\\Recruitment App Assignment\\Recruitment App Assignment\\MainWindow.xaml.cs*",
-              "RelativeToolTip": "Recruitment App Assignment\\MainWindow.xaml.cs*",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAUwB4AAAATAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Nuala\\Desktop\\Course\\c#\\Assessment 2\\NM_Recruit_Assignment\\Recruitment App Assignment\\Recruitment App Assignment\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Recruitment App Assignment\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAArwGIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-29T13:46:52.531Z",
               "EditorCaption": ""
@@ -75,11 +75,12 @@
               "RelativeToolTip": "Recruitment App Assignment\\Contractor.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T13:54:12.918Z"
+              "WhenOpened": "2025-10-30T13:54:12.918Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "RecruitmentSystem.cs",
               "DocumentMoniker": "C:\\Users\\Nuala\\Desktop\\Course\\c#\\Assessment 2\\NM_Recruit_Assignment\\Recruitment App Assignment\\Recruitment App Assignment\\RecruitmentSystem.cs",
               "RelativeDocumentMoniker": "Recruitment App Assignment\\RecruitmentSystem.cs",
@@ -91,7 +92,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
+              "Title": "Job.cs",
+              "DocumentMoniker": "C:\\Users\\Nuala\\Desktop\\Course\\c#\\Assessment 2\\NM_Recruit_Assignment\\Recruitment App Assignment\\Recruitment App Assignment\\Job.cs",
+              "RelativeDocumentMoniker": "Recruitment App Assignment\\Job.cs",
+              "ToolTip": "C:\\Users\\Nuala\\Desktop\\Course\\c#\\Assessment 2\\NM_Recruit_Assignment\\Recruitment App Assignment\\Recruitment App Assignment\\Job.cs",
+              "RelativeToolTip": "Recruitment App Assignment\\Job.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T13:54:30.977Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "RuntimeType.CoreCLR.cs",
               "DocumentMoniker": "C:\\Users\\Nuala\\AppData\\Local\\SourceServer\\40fc69e6e8424ddac55e18388415886d492de592f86a98b63592a7e9d3c50801\\src\\coreclr\\System.Private.CoreLib\\src\\System\\RuntimeType.CoreCLR.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\AppData\\Local\\SourceServer\\40fc69e6e8424ddac55e18388415886d492de592f86a98b63592a7e9d3c50801\\src\\coreclr\\System.Private.CoreLib\\src\\System\\RuntimeType.CoreCLR.cs",
@@ -101,18 +115,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-31T04:17:18.627Z",
               "EditorCaption": " [Read Only]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Job.cs",
-              "DocumentMoniker": "C:\\Users\\Nuala\\Desktop\\Course\\c#\\Assessment 2\\NM_Recruit_Assignment\\Recruitment App Assignment\\Recruitment App Assignment\\Job.cs",
-              "RelativeDocumentMoniker": "Recruitment App Assignment\\Job.cs",
-              "ToolTip": "C:\\Users\\Nuala\\Desktop\\Course\\c#\\Assessment 2\\NM_Recruit_Assignment\\Recruitment App Assignment\\Recruitment App Assignment\\Job.cs",
-              "RelativeToolTip": "Recruitment App Assignment\\Job.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T13:54:30.977Z"
             },
             {
               "$type": "Document",

@@ -13,14 +13,17 @@ using System.Threading.Tasks;
         public string JobTitle { get; set; }
         public decimal AgreedCost { get; set; }
         public bool IsCompleted { get; set; }
+
+    //added default parameterless constuctor 
+    public Job() { }
         
         
     public Job(int jobID, string jobTitle, decimal agreedCost)
     {
-        jobID = jobID;
-        JobTitle = jobTitle;
-        AgreedCost = agreedCost;
-        IsCompleted = false;
+        this.JobID = jobID;
+        this.JobTitle = jobTitle;
+        this.AgreedCost = agreedCost;
+        this.IsCompleted = false;
     }
     public override string ToString()
     {
