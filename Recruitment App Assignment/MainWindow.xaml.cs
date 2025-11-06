@@ -100,24 +100,49 @@ namespace Recruitment_App_Assignment
         private void Button_CompleteJob_Click(object sender, RoutedEventArgs e)
         {
             if (Jobs_ListBox.SelectedItem is Job selectedJob)
-               { 
+            {
                 if (selectedJob.ContractorAssigned != null)
-                    {
-                        manager.CompleteJob(selectedJob);
-                        Jobs_ListBox.ItemsSource = manager.AllJobs;
-                        Contractors_ListBox.ItemsSource = manager.AllContractors;
-                        MessageBox.Show($"Job {selectedJob.JobID}: {selectedJob.JobTitle})marked as complete. Contractor {selectedJob.ContractorAssigned.FirstName} is now available.", "Job Completed", MessageBoxButton.OK, MessageBoxImage.Information);
-                    }
-                    else 
-                    {
-                        MessageBox.Show("This job does not have an assigned contractor.", "Assignment required", MessageBoxButton.OK, MessageBoxImage.Warning); 
-                    }
+                {
+                    manager.CompleteJob(selectedJob);
+                    Jobs_ListBox.ItemsSource = manager.AllJobs;
+                    Contractors_ListBox.ItemsSource = manager.AllContractors;
+                    MessageBox.Show($"Job {selectedJob.JobID}: {selectedJob.JobTitle})marked as complete. Contractor {selectedJob.ContractorAssigned.FirstName} is now available.", "Job Completed", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Please select a job to complete.", "Selection Required", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show("This job does not have an assigned contractor.", "Assignment required", MessageBoxButton.OK, MessageBoxImage.Warning);
                 }
+            }
+            else
+            {
+                MessageBox.Show("Please select a job to complete.", "Selection Required", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
         }
 
-      }
+        private void Button_AssignContractor_Click(object sender, RoutedEventArgs e)
+        {
+            if (Contractors_ListBox.SelectedItem is Contractor selectedContractor)
+            {
+                if (Jobs_ListBox.SelectedItem is Job selectedJob)
+                {
+                    manager.AssignContractorToJob(selectedContractor, selectedJob);
+                    Contractors_ListBox.ItemsSource = manager.AllContractors;
+                    Jobs_ListBox.ItemsSource = manager.AllJobs;
+                    MessageBox.Show("Contractor Successfully Assigned.");
+
+                }
+            }
+
+        }
+
+        private void Button_SearchCost_Click(object sender, RoutedEventArgs e)
+        {
+            decimal minCost = 0m;
+            decimal maxCost = 0m;
+
+            List<Job> searchResults = manager.SearchJobsByCost(minCost, maxCost);
+
+            SearchResults_ListBox.ItemsSource = searchResults;
+        }
+    }
 }

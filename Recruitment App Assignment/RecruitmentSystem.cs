@@ -44,6 +44,12 @@ namespace Recruitment_App_Assignment.Data
             }
         }
 
+        public void AssignContractorToJob(Contractor contractor, Job job)
+        {
+            job.ContractorAssigned = contractor;
+            contractor.IsAssigned = true;
+        }
+
         //public List<Contractor> GetAvailableContractors()
         //{
         //    List<Contractor> availableContractors = new List<Contractor>();
@@ -85,11 +91,13 @@ namespace Recruitment_App_Assignment.Data
 
         //FindAll will go through all and find all true - can change to cost later
 
-        //public List<Contractor> Search (string name)
-        //{
-        //    return contractor.FindAll((x)=> { return x.ToString().Contains(name);  });
-        //}
-
-        //Use above for SearchJobsbyCost #8
+        public List<Job> SearchJobsByCost(decimal minCost, decimal maxCost)
+        {
+            return AllJobs.FindAll((job) =>
+            {
+                return job.AgreedCost >= minCost && job.AgreedCost <= maxCost;
+            });
+        }
+        
     }
 }
