@@ -83,9 +83,21 @@ namespace Recruitment_App_Assignment
         private int nextJobID = 1;
         private void Button_AddJob_Click(object sender, RoutedEventArgs e)
         {
-            string jobTitle = JobTitleBox.Text.Trim();
-            string costText = AgreedCostBox.Text.Trim();
-            decimal agreedCost = 0;
+            string jobTitle = JobTitle_TextBox.Text.Trim();
+            decimal agreedCost = 0m;
+
+            if (string.IsNullOrEmpty(jobTitle))
+            {
+                MessageBox.Show("Job Title cannot be empty.", "Input Error");
+                return;
+            }
+            //string costText = AgreedCostBox.Text.Trim();
+            
+            bool isValidCost = decimal.TryParse(AgreedCostBox.Text, out agreedCost);
+            if (!isValidCost)
+            {
+                MessageBox.Show("Please enter a valid number.", "Input Error");
+            }
 
             Job newJob = new Job();
             newJob.JobID = nextJobID++;
@@ -143,6 +155,11 @@ namespace Recruitment_App_Assignment
             List<Job> searchResults = manager.SearchJobsByCost(minCost, maxCost);
 
             SearchResults_ListBox.ItemsSource = searchResults;
+        }
+
+        private void AgreedCostBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

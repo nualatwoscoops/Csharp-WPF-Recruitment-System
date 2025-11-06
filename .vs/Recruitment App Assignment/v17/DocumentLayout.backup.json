@@ -45,8 +45,8 @@
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Nuala\\Desktop\\Course\\c#\\Assessment 2\\NM_Recruit_Assignment\\Recruitment App Assignment\\Recruitment App Assignment\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Recruitment App Assignment\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\Nuala\\Desktop\\Course\\c#\\Assessment 2\\NM_Recruit_Assignment\\Recruitment App Assignment\\Recruitment App Assignment\\MainWindow.xaml",
-              "RelativeToolTip": "Recruitment App Assignment\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Nuala\\Desktop\\Course\\c#\\Assessment 2\\NM_Recruit_Assignment\\Recruitment App Assignment\\Recruitment App Assignment\\MainWindow.xaml*",
+              "RelativeToolTip": "Recruitment App Assignment\\MainWindow.xaml*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-10-29T13:46:56.582Z",
               "IsPinned": true,
@@ -63,8 +63,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-30T13:54:12.918Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -74,7 +73,7 @@
               "RelativeDocumentMoniker": "Recruitment App Assignment\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\Nuala\\Desktop\\Course\\c#\\Assessment 2\\NM_Recruit_Assignment\\Recruitment App Assignment\\Recruitment App Assignment\\MainWindow.xaml.cs",
               "RelativeToolTip": "Recruitment App Assignment\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAG0AAAAAAAAAAAAEwIwAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAFAAAAAAAAAAAAASwHEAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-29T13:46:52.531Z",
               "EditorCaption": ""

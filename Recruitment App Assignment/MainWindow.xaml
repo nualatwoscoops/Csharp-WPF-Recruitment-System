@@ -41,7 +41,8 @@
         Content=" Complete Selected Job"
         Width="150"
         Height="27"
-        Click="Button_CompleteJob_Click" Margin="330,392,120,204"/>
+        Click="Button_CompleteJob_Click" 
+        Margin="305,386,145,210"/>
 
 
         <!-- === JOB MANAGEMENT === -->
@@ -60,10 +61,10 @@
                 <Label Content="Job Title:" Width="80" VerticalAlignment="Center"/>
 
                 <!-- Add new job inputs -->
-                <TextBox x:Name="JobTitleBox" 
+                <TextBox x:Name="JobTitle_TextBox" 
                  Width="132" 
                  TextWrapping="Wrap" 
-                 Height="23" TextChanged="JobTitleBox_TextChanged"/>
+                 Height="23"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,5,0,10">
@@ -73,7 +74,7 @@
                 <TextBox x:Name="AgreedCostBox" 
                  Width="113" 
                  TextWrapping="Wrap" 
-                 Height="23"/>
+                 Height="23" TextChanged="AgreedCostBox_TextChanged"/>
             </StackPanel>
 
             <!-- Add new job button -->
@@ -89,7 +90,7 @@
 
         <!-- Search Jobs -->
         <StackPanel HorizontalAlignment="Left" 
-            Margin="5,440,0,0" 
+            Margin="5,400,0,0" 
             VerticalAlignment="Top" 
             Width="216">
 
