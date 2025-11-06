@@ -42,7 +42,7 @@ namespace Recruitment_App_Assignment
 
             this.DataContext = this;
 
-                        
+
         }
         private void Button_AddContractor_Click(object sender, RoutedEventArgs e)
         {
@@ -72,7 +72,7 @@ namespace Recruitment_App_Assignment
             {
                 manager.RemoveContractor(selectedContractor);
             }
-            else 
+            else
             {
                 MessageBox.Show("Please select a contractor to remove first.", "Selection Required", MessageBoxButton.OK, MessageBoxImage.Warning); ;
             }
@@ -89,15 +89,35 @@ namespace Recruitment_App_Assignment
 
             Job newJob = new Job();
             newJob.JobID = nextJobID++;
-            newJob.JobTitle = jobTitle; 
-            newJob.AgreedCost = agreedCost; 
+            newJob.JobTitle = jobTitle;
+            newJob.AgreedCost = agreedCost;
 
             manager.AddJob(newJob);
             Jobs_ListBox.ItemsSource = manager.AllJobs;
 
         }
 
-        private void
+        private void Button_CompleteJob_Click(object sender, RoutedEventArgs e)
+        {
+            if (Jobs_ListBox.SelectedItem is Job selectedJob)
+               { 
+                if (selectedJob.ContractorAssigned != null)
+                    {
+                        manager.CompleteJob(selectedJob);
+                        Jobs_ListBox.ItemsSource = manager.AllJobs;
+                        Contractors_ListBox.ItemsSource = manager.AllContractors;
+                        MessageBox.Show($"Job {selectedJob.JobID}: {selectedJob.JobTitle})marked as complete. Contractor {selectedJob.ContractorAssigned.FirstName} is now available.", "Job Completed", MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
+                    else 
+                    {
+                        MessageBox.Show("This job does not have an assigned contractor.", "Assignment required", MessageBoxButton.OK, MessageBoxImage.Warning); 
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please select a job to complete.", "Selection Required", MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
+        }
 
-    }
+      }
 }

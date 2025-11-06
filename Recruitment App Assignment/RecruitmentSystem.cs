@@ -35,14 +35,14 @@ namespace Recruitment_App_Assignment.Data
             AllJobs.Add(newJob);
         }
 
-        //public void CompleteJob(Job jobToComplete)
-        //{
-        //    jobToComplete.IsCompleted = true;
-        //    if (jobToComplete.AssignedWorker != null)
-        //    {
-        //        jobToComplete.AssignedWorker.IsAvailable = true;
-        //    }
-        //}
+        public void CompleteJob(Job jobToComplete)
+        {
+            jobToComplete.IsCompleted = true;
+            if (jobToComplete.ContractorAssigned != null)
+            {
+                jobToComplete.ContractorAssigned.IsAssigned = false;
+            }
+        }
 
         //public List<Contractor> GetAvailableContractors()
         //{
@@ -84,7 +84,7 @@ namespace Recruitment_App_Assignment.Data
         //}
 
         //FindAll will go through all and find all true - can change to cost later
-        
+
         //public List<Contractor> Search (string name)
         //{
         //    return contractor.FindAll((x)=> { return x.ToString().Contains(name);  });

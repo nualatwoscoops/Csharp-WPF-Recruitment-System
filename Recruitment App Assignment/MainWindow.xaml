@@ -4,11 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="NuCorp Contractor Recruitment Management System" Height="539" Width="600"
+        Title="NuCorp Contractor Recruitment Management System" Height="600" Width="600"
         FontSize="12">
     <!-- === CONTRACTOR MANAGEMENT === -->
-    <Grid Margin="0,0,0,-6">
-        
+    <Grid Margin="0,0,0,-39">
+
         <!-- Adding a new contractor inputs -->
         <Label Content="Add Contractor" FontWeight="Bold" FontSize="10" Margin="0,0,0,311" HorizontalAlignment="Left" Width="108"/>
         <Label Content="First Name:" HorizontalAlignment="Left" Margin="28,25,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.297,-0.928"/>
@@ -23,7 +23,7 @@
 
         <!-- List contractors box -->
         <ListBox x:Name="Contractors_ListBox" HorizontalAlignment="Left" Height="152" Margin="240,10,0,0" VerticalAlignment="Top" Width="350"/>
-        
+
         <!-- Load and remove contractor inputs -->
         <Button x:Name="Button_Load_Contractors" Content="Load Contractors" HorizontalAlignment="Left" Margin="240,170,0,0" VerticalAlignment="Top" Width="156" Height="27" Click="Button_Load_Contractors_Click"/>
         <Button x:Name="Button_Remove_Contractors" Content="Remove Contractors" HorizontalAlignment="Right" Margin="0,170,10,0" VerticalAlignment="Top" Width="185" Height="27" Click="Button_Remove_Contractors_Click"/>
@@ -51,9 +51,9 @@
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,5,0,10">
-                
+
                 <Label Content="Agreed Cost ($):" Width="100" VerticalAlignment="Center"/>
-                
+
                 <TextBox x:Name="AgreedCostBox" 
                  Width="113" 
                  TextWrapping="Wrap" 
@@ -70,7 +70,16 @@
             Margin="0,5,0,10"/>
             
             <!-- Job List View-->
-            <ListBox x:Name="Jobs_ListBox" HorizontalAlignment="Left" Width="211" Height="140" Margin="0,5,0,500"/>
+            <ListBox x:Name="Jobs_ListBox" Width="211" Height="140"/>
+
+            <!-- Complete Job Button-->
+            <Button x:Name="Button_CompleteJob"
+             Content=" Complete Selected Job"
+             HorizontalAlignment="Center"
+                    Width="150"
+                    Height="27"
+                    Click="Button_CompleteJob_Click"
+                    Margin="0,5,0,10"/>
 
         </StackPanel>
     </Grid>

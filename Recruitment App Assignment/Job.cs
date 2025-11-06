@@ -7,17 +7,17 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-    public class Job
-    {
-        public int JobID { get; set; }
-        public string JobTitle { get; set; }
-        public decimal AgreedCost { get; set; }
-        public bool IsCompleted { get; set; }
+public class Job
+{
+    public int JobID { get; set; }
+    public string JobTitle { get; set; }
+    public decimal AgreedCost { get; set; }
+    public bool IsCompleted { get; set; }
 
     //added default parameterless constuctor 
     public Job() { }
-        
-        
+
+
     public Job(int jobID, string jobTitle, decimal agreedCost)
     {
         this.JobID = jobID;
@@ -29,5 +29,9 @@ using System.Threading.Tasks;
     {
         return $"[{JobID}] {JobTitle} (${AgreedCost:N2})";
     }
+
+    public Contractor? ContractorAssigned { get; set; }
 }
+
+   
 
