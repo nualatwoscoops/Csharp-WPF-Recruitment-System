@@ -27,7 +27,7 @@ public class Contractor
             IsAssigned = false;
         }
         
-
+        // Returns string to show current contractor, name and rate
         public override string ToString()
         {
             return $"{FirstName} {LastName} (${HourlyRate}/hr)";

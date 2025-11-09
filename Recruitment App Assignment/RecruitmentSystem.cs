@@ -8,15 +8,19 @@ using System.Threading.Tasks;
 using System.Windows.Navigation;
 
 namespace Recruitment_App_Assignment.Data
+
+    // Manages all contractor and job data for the recruitment system
 {
     public class RecruitmentSystem
     {
-        //holds all contractor objects 
+        //holds all contractor objects in system
         public List<Contractor> AllContractors { get; set; } = new List<Contractor>();
 
-        //holds all jobs which the agency manages
+        //holds all job objects in system 
         public List<Job> AllJobs { get; set; } = new List<Job>();
 
+
+        // Retrieves and returns List of contractors in the system
         public List<Contractor> GetAllContractors()
             { return AllContractors; }
 
@@ -25,16 +29,19 @@ namespace Recruitment_App_Assignment.Data
         {
             AllContractors.Remove(oldContractor);
         }
-
         public void AddContractor(Contractor Contractor)
         {
             AllContractors.Add(Contractor);   
         }
+
+        // Adds jobs
         public void AddJob(Job newJob)
         {
             AllJobs.Add(newJob);
         }
 
+        // Marks an assigned job as completed and then frees up 
+        
         public void CompleteJob(Job jobToComplete)
         {
             jobToComplete.IsCompleted = true;
@@ -43,12 +50,14 @@ namespace Recruitment_App_Assignment.Data
                 jobToComplete.ContractorAssigned.IsAssigned = false;
             }
         }
-
+        // Assigns a contractor to a job.
         public void AssignContractorToJob(Contractor contractor, Job job)
         {
             job.ContractorAssigned = contractor;
             contractor.IsAssigned = true;
         }
+
+        // TODO: Return contractors to list of jobs
 
         //public List<Contractor> GetAvailableContractors()
         //{
@@ -89,7 +98,7 @@ namespace Recruitment_App_Assignment.Data
         //    return null;    
         //}
 
-        //FindAll will go through all and find all true - can change to cost later
+        //FindAll will go through all and find all that are within the given range
 
         public List<Job> SearchJobsByCost(decimal minCost, decimal maxCost)
         {

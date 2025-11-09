@@ -19,13 +19,13 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace Recruitment_App_Assignment
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+    
+    // Interaction logic for MainWindow.xaml
     public partial class MainWindow : Window
     {
         private RecruitmentSystem manager;
 
+        // Provides list of hourly rates. 
         public List<decimal> StandardHourlyRates { get; } = new List<decimal>
             {
             00.00m,
@@ -34,6 +34,7 @@ namespace Recruitment_App_Assignment
             75.00m,
             100.00m
             };
+
         public MainWindow()
         {
             manager = new RecruitmentSystem();
@@ -41,12 +42,44 @@ namespace Recruitment_App_Assignment
             InitializeComponent();
 
             this.DataContext = this;
-
-
         }
+        
+        // CONTRACTOR MANAGEMENT
+
+        // Handles logic for adding new Contracor, and input validation
         private void Button_AddContractor_Click(object sender, RoutedEventArgs e)
         {
+            string firstName = FirstNameBox.Text;
+            string lastName = LastNameBox.Text;
+
+            if (string.IsNullOrEmpty(FirstNameBox.Text))
+            {
+                MessageBox.Show("Cannot be empty.", "Input Error");
+                return;
+            }
+            if (string.IsNullOrEmpty(LastNameBox.Text))
+            {
+                MessageBox.Show("Cannot be empty.", "Input Error");
+                return;
+            }
+
+            
+            if (HourlyRate_ComboBox.SelectedItem == null)
+            {
+                MessageBox.Show("Please make a valid selection.", "Input Error.");
+                return;
+            }
+            
+            if (StartDatePicker.SelectedDate == null)
+            {
+                MessageBox.Show("Please make a valid selection.", "Input Error.");
+                return;
+            }
+
+            // TO DO: now that validation has been added new contractor object needs to be updated
+
             Contractor newContractor = new Contractor();
+
             newContractor.FirstName = FirstNameBox.Text;
             newContractor.LastName = LastNameBox.Text;
             newContractor.HourlyRate = (decimal)HourlyRate_ComboBox.SelectedItem;
@@ -56,6 +89,8 @@ namespace Recruitment_App_Assignment
             Contractors_ListBox.ItemsSource = manager.GetAllContractors();
         }
 
+
+        // Handles logic for loading Contractors to the list
         private void Button_Load_Contractors_Click(object sender, RoutedEventArgs e)
         {
             Contractors_ListBox.ItemsSource = manager.GetAllContractors();
@@ -65,6 +100,7 @@ namespace Recruitment_App_Assignment
             //}
         }
 
+        // Handles logic for removing a Contractor
         private void Button_Remove_Contractors_Click(object sender, RoutedEventArgs e)
         {
             object selectedItem = Contractors_ListBox.SelectedItem;
@@ -78,9 +114,12 @@ namespace Recruitment_App_Assignment
             }
         }
 
+        // JOB MANAGEMENT
         public List<Job> JobList = new List<Job>();
 
         private int nextJobID = 1;
+
+        // Handles logic for adding new jobs, and input validation
         private void Button_AddJob_Click(object sender, RoutedEventArgs e)
         {
             string jobTitle = JobTitle_TextBox.Text.Trim();
@@ -109,6 +148,7 @@ namespace Recruitment_App_Assignment
 
         }
 
+        // Shows selected job is complete or not
         private void Button_CompleteJob_Click(object sender, RoutedEventArgs e)
         {
             if (Jobs_ListBox.SelectedItem is Job selectedJob)
@@ -131,6 +171,8 @@ namespace Recruitment_App_Assignment
             }
         }
 
+        // Handles assigning a selected contractor to a selected job
+        // TO DO: Validation
         private void Button_AssignContractor_Click(object sender, RoutedEventArgs e)
         {
             if (Contractors_ListBox.SelectedItem is Contractor selectedContractor)
@@ -146,7 +188,8 @@ namespace Recruitment_App_Assignment
             }
 
         }
-
+        // Searches and filters jobs 
+        // TO DO: validation
         private void Button_SearchCost_Click(object sender, RoutedEventArgs e)
         {
             decimal minCost = 0m;
@@ -157,9 +200,9 @@ namespace Recruitment_App_Assignment
             SearchResults_ListBox.ItemsSource = searchResults;
         }
 
-        private void AgreedCostBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
+        //private void AgreedCostBox_TextChanged(object sender, TextChangedEventArgs e)
+        //{
 
-        }
+        //}
     }
 }
