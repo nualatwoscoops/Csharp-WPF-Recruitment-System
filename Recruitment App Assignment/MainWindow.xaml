@@ -74,7 +74,7 @@
                 <TextBox x:Name="AgreedCostBox" 
                  Width="113" 
                  TextWrapping="Wrap" 
-                 Height="23" TextChanged="AgreedCostBox_TextChanged"/>
+                 Height="23"/>
             </StackPanel>
 
             <!-- Add new job button -->

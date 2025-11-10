@@ -47,6 +47,7 @@ namespace Recruitment_App_Assignment
         // CONTRACTOR MANAGEMENT
 
         // Handles logic for adding new Contracor, and input validation
+
         private void Button_AddContractor_Click(object sender, RoutedEventArgs e)
         {
             string firstName = FirstNameBox.Text;
@@ -79,7 +80,6 @@ namespace Recruitment_App_Assignment
             // TO DO: now that validation has been added new contractor object needs to be updated
 
             Contractor newContractor = new Contractor();
-
             newContractor.FirstName = FirstNameBox.Text;
             newContractor.LastName = LastNameBox.Text;
             newContractor.HourlyRate = (decimal)HourlyRate_ComboBox.SelectedItem;
