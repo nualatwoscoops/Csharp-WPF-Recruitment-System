@@ -19,7 +19,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace Recruitment_App_Assignment
 {
-    
+
     // Interaction logic for MainWindow.xaml
     public partial class MainWindow : Window
     {
@@ -43,11 +43,16 @@ namespace Recruitment_App_Assignment
 
             this.DataContext = this;
         }
-        
+
+        private void RefreshAllLists() 
+        {
+            Jobs_ListBox.ItemsSource = null;
+            Jobs_ListBox.ItemsSource = manager.AllJobs;
+        }
+
         // CONTRACTOR MANAGEMENT
 
         // Handles logic for adding new Contracor, and input validation
-
         private void Button_AddContractor_Click(object sender, RoutedEventArgs e)
         {
             string firstName = FirstNameBox.Text;
@@ -63,32 +68,33 @@ namespace Recruitment_App_Assignment
                 MessageBox.Show("Cannot be empty.", "Input Error");
                 return;
             }
-
-            
             if (HourlyRate_ComboBox.SelectedItem == null)
             {
                 MessageBox.Show("Please make a valid selection.", "Input Error.");
                 return;
             }
-            
             if (StartDatePicker.SelectedDate == null)
             {
                 MessageBox.Show("Please make a valid selection.", "Input Error.");
                 return;
             }
-
-            // TO DO: now that validation has been added new contractor object needs to be updated
-
             Contractor newContractor = new Contractor();
-            newContractor.FirstName = FirstNameBox.Text;
-            newContractor.LastName = LastNameBox.Text;
-            newContractor.HourlyRate = (decimal)HourlyRate_ComboBox.SelectedItem;
-            newContractor.StartDate = StartDatePicker.SelectedDate ?? DateTime.Today;
-            manager.AddContractor(newContractor);
-            //Contractors_ListData.Items.Refresh();
-            Contractors_ListBox.ItemsSource = manager.GetAllContractors();
-        }
+            {
+                newContractor.FirstName = FirstNameBox.Text;
+                newContractor.LastName = LastNameBox.Text;
+                newContractor.HourlyRate = (decimal)HourlyRate_ComboBox.SelectedItem;
+                newContractor.StartDate = StartDatePicker.SelectedDate ?? DateTime.Today;
+            }
+            ;
 
+            manager.AddContractor(newContractor);
+
+            Contractors_ListBox.ItemsSource = manager.GetAllContractors();
+            FirstNameBox.Clear();
+            LastNameBox.Clear();
+            Contractors_ListBox.Items.Refresh();
+
+        }
 
         // Handles logic for loading Contractors to the list
         private void Button_Load_Contractors_Click(object sender, RoutedEventArgs e)
@@ -98,6 +104,7 @@ namespace Recruitment_App_Assignment
             //{
             //    Contractors_ListBox.Items.Add(contractor);
             //}
+            Contractors_ListBox.Items.Refresh();
         }
 
         // Handles logic for removing a Contractor
@@ -107,6 +114,8 @@ namespace Recruitment_App_Assignment
             if (Contractors_ListBox.SelectedItem is Contractor selectedContractor)
             {
                 manager.RemoveContractor(selectedContractor);
+                Contractors_ListBox.ItemsSource = manager.GetAllContractors();
+                Contractors_ListBox.Items.Refresh();
             }
             else
             {
@@ -130,12 +139,13 @@ namespace Recruitment_App_Assignment
                 MessageBox.Show("Job Title cannot be empty.", "Input Error");
                 return;
             }
-            //string costText = AgreedCostBox.Text.Trim();
             
             bool isValidCost = decimal.TryParse(AgreedCostBox.Text, out agreedCost);
-            if (!isValidCost)
+
+            if (!isValidCost || agreedCost <= 0)
             {
-                MessageBox.Show("Please enter a valid number.", "Input Error");
+                MessageBox.Show("Please enter a valid number for the Agreed Cost.", "Input Error");
+                return;
             }
 
             Job newJob = new Job();
@@ -144,7 +154,9 @@ namespace Recruitment_App_Assignment
             newJob.AgreedCost = agreedCost;
 
             manager.AddJob(newJob);
-            Jobs_ListBox.ItemsSource = manager.AllJobs;
+            RefreshAllLists();
+            JobTitle_TextBox.Clear();
+            AgreedCostBox.Clear();
 
         }
 
@@ -189,20 +201,50 @@ namespace Recruitment_App_Assignment
 
         }
         // Searches and filters jobs 
-        // TO DO: validation
         private void Button_SearchCost_Click(object sender, RoutedEventArgs e)
         {
             decimal minCost = 0m;
             decimal maxCost = 0m;
 
+            bool isMinEntered = !string.IsNullOrWhiteSpace(MinCost_TextBox.Text);
+
+            if(isMinEntered)
+            {
+                if (!decimal.TryParse(MinCost_TextBox.Text, out minCost) || minCost < 0)
+                {
+                   MessageBox.Show("Please enter a valid number for Minimum Cost.", "Input Error");
+                   return;
+                }
+            }
+
+                else 
+                {
+                    minCost = 0m;
+                }
+            bool isMaxEntered = !string.IsNullOrWhiteSpace(MaxCost_TextBox.Text);
+
+                if (isMaxEntered)
+                {
+                    if (!decimal.TryParse(MaxCost_TextBox.Text, out maxCost) || maxCost < 0)
+                    {
+                       MessageBox.Show("Please enter a valid number for Minimum Cost.", "Input Error");
+                       return;
+                    }
+                }
+                else
+                {
+                    maxCost = decimal.MaxValue;
+                }
+
+            if (minCost > maxCost) 
+            {
+                MessageBox.Show("Minimum Cost cannot be greater than Maximum Cost.", "Input Error.");
+                return;
+            }
+            
             List<Job> searchResults = manager.SearchJobsByCost(minCost, maxCost);
 
             SearchResults_ListBox.ItemsSource = searchResults;
         }
-
-        //private void AgreedCostBox_TextChanged(object sender, TextChangedEventArgs e)
-        //{
-
-        //}
     }
 }

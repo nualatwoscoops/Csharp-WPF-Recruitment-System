@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="NuCorp Contractor Recruitment Management System" Height="600" Width="600"
+        Title="NuCorp Contractor Recruitment Management System" Height="650" Width="600"
         FontSize="12">
     <!-- === CONTRACTOR MANAGEMENT === -->
     <Grid Margin="0,0,0,-39">
