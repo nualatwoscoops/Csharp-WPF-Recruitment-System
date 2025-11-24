@@ -123,6 +123,18 @@ namespace Recruitment_App_Assignment
             }
         }
 
+        private void ContractorFilter_ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (ContractorFilter_ComboBox.SelectedIndex == -1)
+            {
+                return;
+            }
+         
+            string selectedFilter = (ContractorFilter_ComboBox.SelectedItem as ComboBoxItem)?.Content.ToString();
+            List<Contractor> filteredContractors = manager.FilterContractors(selectedFilter);
+            Contractors_ListBox.ItemsSource = filteredContractors;
+        }
+
         // JOB MANAGEMENT
         public List<Job> JobList = new List<Job>();
 

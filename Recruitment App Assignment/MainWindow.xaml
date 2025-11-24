@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="NuCorp Contractor Recruitment Management System" Height="650" Width="600"
+        Title="NuCorp Contractor Recruitment Management System" Height="650" Width="650"
         FontSize="12">
     <!-- === CONTRACTOR MANAGEMENT === -->
     <Grid Margin="0,0,0,-39">
@@ -21,16 +21,37 @@
         <ComboBox x:Name="HourlyRate_ComboBox" HorizontalAlignment="Left" Margin="102,138,0,0" VerticalAlignment="Top" Width="119" ItemsSource="{Binding StandardHourlyRates}" SelectedIndex="0"/>
         <Button x:Name="Button_AddContractor" Content="Add Contractor" HorizontalAlignment="Left" Margin="102,170,0,0" VerticalAlignment="Top" Width="119" Click="Button_AddContractor_Click" Height="27"/>
 
+        <!-- Contractor View/Filter Title-->
+        <TextBlock Text="Filter Contractors By:" 
+           HorizontalAlignment="Left" 
+           Margin="430,25,0,0"
+           VerticalAlignment="Top" 
+           Width="156" 
+           FontWeight="Bold"/>
+
+        <!-- Contractor Filter Combo Box -->
+        <ComboBox x:Name="ContractorFilter_ComboBox" 
+        HorizontalAlignment="Left" 
+          Margin="430,46,0,0"
+        VerticalAlignment="Top" 
+          Width="158"
+            SelectionChanged="ContractorFilter_ComboBox_SelectionChanged" Height="26">
+            <ComboBoxItem Content="All Contractors"/>
+            <ComboBoxItem Content="Available Only"/>
+            <ComboBoxItem Content="Unavailable Only"/>
+        </ComboBox>
+
         <!-- List contractors box -->
-        <Label Content="View Contractors" HorizontalAlignment="Left" Margin="220,3,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.713,1.281"/>
-        <ListBox x:Name="Contractors_ListBox" HorizontalAlignment="Left" Height="137" Margin="240,25,0,0" SelectionMode="Single" VerticalAlignment="Top" Width="350"/>
+        <ListBox x:Name="Contractors_ListBox" HorizontalAlignment="Left" Height="168" Margin="250,25,0,0" SelectionMode="Single" VerticalAlignment="Top" Width="175"/>
 
         <!-- Load and remove contractor buttons -->
-        <Button x:Name="Button_Load_Contractors" Content="Load Contractors" HorizontalAlignment="Left" Margin="240,170,0,0" VerticalAlignment="Top" Width="156" Height="27" Click="Button_Load_Contractors_Click"/>
-        <Button x:Name="Button_Remove_Contractors" Content="Remove Contractors" HorizontalAlignment="Right" Margin="0,170,10,0" VerticalAlignment="Top" Width="185" Height="27" Click="Button_Remove_Contractors_Click"/>
+        <Button x:Name="Button_Load_Contractors" Content="Load Contractors" HorizontalAlignment="Left" Margin="430,104,0,0" VerticalAlignment="Top" Width="158" Height="27" Click="Button_Load_Contractors_Click"/>
+        <Button x:Name="Button_Remove_Contractors" Content="Remove Contractors" HorizontalAlignment="Left" Margin="430,143,12,0" VerticalAlignment="Top" Width="158" Height="27" Click="Button_Remove_Contractors_Click"/>
 
         <!-- Assign contractor button-->
-        <Button x:Name="Button_AssignContractor" Content="Assign Selected Contractor to Selected Job" HorizontalAlignment="Left" Width="250" Height="27" Click="Button_AssignContractor_Click" Margin="305,210,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Button_AssignContractor" Content="Assign Selected Contractor to Selected Job" HorizontalAlignment="Left" Width="250" Height="27" Click="Button_AssignContractor_Click" Margin="250,209,0,0" VerticalAlignment="Top"/>
+
+
 
         <!-- Job List View-->
         <Label Content="View Uncompleted Jobs" HorizontalAlignment="Left" Margin="240,236,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.713,1.281"/>
@@ -112,7 +133,7 @@
                 <TextBox x:Name="MaxCost_TextBox" 
                      Width="120" 
                      TextWrapping="Wrap" 
-                     Height="23"/>  
+                     Height="23"/>
             </StackPanel>
 
             <!-- Search Button-->

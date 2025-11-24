@@ -57,6 +57,26 @@ namespace Recruitment_App_Assignment.Data
             contractor.IsAssigned = true;
         }
 
+        public List<Contractor> FilterContractors(string filterType)
+        {
+            if (filterType == "All Contractors")
+            { 
+                return AllContractors;
+            }
+
+            if (filterType == "Available Only")
+            { 
+                return AllContractors.Where(c => !c.IsAssigned).ToList();
+            }
+
+            if (filterType == "Unavailable Only")
+            {
+                return AllContractors.Where(c => c.IsAssigned).ToList();
+            }
+
+            return AllContractors;
+        }
+
         // TODO: Return contractors to list of jobs
 
         //public List<Contractor> GetAvailableContractors()
