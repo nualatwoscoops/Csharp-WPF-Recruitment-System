@@ -92,6 +92,8 @@ namespace Recruitment_App_Assignment
             Contractors_ListBox.ItemsSource = manager.GetAllContractors();
             FirstNameBox.Clear();
             LastNameBox.Clear();
+            HourlyRate_ComboBox.SelectedItem = null;
+            StartDatePicker.SelectedDate = null;
             Contractors_ListBox.Items.Refresh();
 
         }
@@ -123,9 +125,10 @@ namespace Recruitment_App_Assignment
             }
         }
 
+        //Handles Contractor Filter Combo Box 
         private void ContractorFilter_ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (ContractorFilter_ComboBox.SelectedIndex == -1)
+            if ((int)ContractorFilter_ComboBox.SelectedIndex == -1)
             {
                 return;
             }
@@ -172,6 +175,8 @@ namespace Recruitment_App_Assignment
 
         }
 
+        
+
         // Shows selected job is complete or not
         private void Button_CompleteJob_Click(object sender, RoutedEventArgs e)
         {
@@ -195,6 +200,8 @@ namespace Recruitment_App_Assignment
             }
         }
 
+         
+
         // Handles assigning a selected contractor to a selected job
         // TO DO: Validation
         private void Button_AssignContractor_Click(object sender, RoutedEventArgs e)
@@ -212,7 +219,7 @@ namespace Recruitment_App_Assignment
             }
 
         }
-        // Searches and filters jobs 
+        // Searches and filters jobs by cost
         private void Button_SearchCost_Click(object sender, RoutedEventArgs e)
         {
             decimal minCost = 0m;
@@ -258,5 +265,17 @@ namespace Recruitment_App_Assignment
 
             SearchResults_ListBox.ItemsSource = searchResults;
         }
+
+        //Handles Job Filter Combo Box 
+        private void JobFilter_ComboBoz_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if ((int)JobFilter_ComboBox.SelectedItem == -1)
+            {
+                return;
+            }
+            string selectedFilter = (JobFilter_ComboBox.SelectedItem as ComboBoxItem)?.Content.ToString();
+            List<Job> filteredJobs = manager.FilterJobs(selectedFilter);
+            Jobs_ListBox.ItemsSource = filteredJobs;
+        }       
     }
 }

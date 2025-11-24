@@ -57,6 +57,7 @@ namespace Recruitment_App_Assignment.Data
             contractor.IsAssigned = true;
         }
 
+        // Filters the list of contractors by All/Available/Unavailable in a combox box
         public List<Contractor> FilterContractors(string filterType)
         {
             if (filterType == "All Contractors")
@@ -92,6 +93,27 @@ namespace Recruitment_App_Assignment.Data
         //    }
         //    return availableContractors; 
         //}
+
+        // Filters the list of Jobs by All/Unassigned/Complete in a combox box
+        public List<Job> FilterJobs(string filterType)
+        {
+            if (filterType == "All Jobs")
+            {
+                return AllJobs;
+            }
+
+            if (filterType == "Unassigned Jobs")
+            {
+                return AllJobs.Where(job => job.ContractorAssigned == null).ToList();
+            }
+             
+            if (filterType == "Completed Jobs")
+            {
+                return AllJobs.Where(job => job.IsCompleted).ToList();
+            }
+
+            return AllJobs;
+        }
 
         //public List<Job> GetUnassignedJobs()
         //{

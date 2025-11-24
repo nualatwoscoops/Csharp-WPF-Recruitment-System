@@ -10,7 +10,7 @@
     <Grid Margin="0,0,0,-39">
 
         <!-- Adding a new contractor inputs -->
-        <Label Content="Add Contractor" FontWeight="Bold" FontSize="10" Margin="0,0,0,311" HorizontalAlignment="Left" Width="108"/>
+        <Label Content="Add Contractor" FontWeight="Bold" FontSize="10" Margin="5,0,0,248" HorizontalAlignment="Left" Width="108"/>
         <Label Content="First Name:" HorizontalAlignment="Left" Margin="28,25,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.297,-0.928"/>
         <Label Content="Last Name:" HorizontalAlignment="Left" Margin="29,55,0,0" VerticalAlignment="Top"/>
         <Label Content="Start Date:" HorizontalAlignment="Left" Margin="32,99,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.58,-1.118"/>
@@ -51,11 +51,29 @@
         <!-- Assign contractor button-->
         <Button x:Name="Button_AssignContractor" Content="Assign Selected Contractor to Selected Job" HorizontalAlignment="Left" Width="250" Height="27" Click="Button_AssignContractor_Click" Margin="250,209,0,0" VerticalAlignment="Top"/>
 
+        <!-- Job Filter Title-->
+        <TextBlock Text="Filter Jobs By:"
+                   HorizontalAlignment="Left"
+                   Margin="438,267,0,0"
+                   VerticalAlignment="Top"
+                   Width="156"
+                   FontWeight="Bold"/>
 
+        <!-- Job Filter Combo Box -->
+        <ComboBox x:Name="JobFilter_ComboBox"
+                  HorizontalAlignment="Left"
+                  Margin="438,300,0,0"
+                  VerticalAlignment="Top"
+                  Width="156"
+                  SelectionChanged="JobFilter_ComboBox_SelectionChanged">
+            <ComboBoxItem Content="All Jobs"/>
+            <ComboBoxItem Content="Unassigned Jobs"/>
+            <ComboBoxItem Content="Completed Jobs"/>
+        </ComboBox>
 
         <!-- Job List View-->
-        <Label Content="View Uncompleted Jobs" HorizontalAlignment="Left" Margin="240,236,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.713,1.281"/>
-        <ListBox x:Name="Jobs_ListBox" Margin="240,267,29,242" SelectionMode="Single"/>
+        <Label Content="View Jobs:" HorizontalAlignment="Left" Margin="240,241,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.713,1.281"/>
+        <ListBox x:Name="Jobs_ListBox" Margin="240,267,225,242" SelectionMode="Single"/>
 
         <!-- Complete Job Button-->
         <Button x:Name="Button_CompleteJob"
@@ -63,12 +81,12 @@
         Width="150"
         Height="27"
         Click="Button_CompleteJob_Click" 
-        Margin="305,386,145,210"/>
+        Margin="441,382,59,264"/>
 
 
         <!-- === JOB MANAGEMENT === -->
         <StackPanel HorizontalAlignment="Left" 
-            Margin="5,210,0,0" 
+            Margin="10,273,0,0" 
             VerticalAlignment="Top" 
             Width="216">
 
@@ -111,7 +129,7 @@
 
         <!-- Search Jobs -->
         <StackPanel HorizontalAlignment="Left" 
-            Margin="5,400,0,0" 
+            Margin="11,469,0,0" 
             VerticalAlignment="Top" 
             Width="216">
 
