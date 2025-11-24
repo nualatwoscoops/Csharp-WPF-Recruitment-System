@@ -27,6 +27,18 @@ public class Job
         this.JobTitle = jobTitle;
         this.AgreedCost = agreedCost;
         this.IsCompleted = false;
+        this.ContractorAssigned = null;
+    }
+
+    public string JobInfo 
+    {
+        get
+        {
+            string cost = AgreedCost.ToString();
+            string status = ContractorAssigned == null ? "Unassigned" : $"Assigned to {ContractorAssigned.FirstName}";
+            return $"{JobTitle}, Cost: {cost}, Status: {status}";
+        }
+    
     }
 
     // Returns string to represent current job with ID, title and cost

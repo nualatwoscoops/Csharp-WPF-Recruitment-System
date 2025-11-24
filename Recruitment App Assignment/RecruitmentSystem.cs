@@ -140,8 +140,8 @@ namespace Recruitment_App_Assignment.Data
         //    return null;    
         //}
 
-        //FindAll will go through all and find all that are within the given range
 
+        //FindAll will go through all and find all that are within the given range
         public List<Job> SearchJobsByCost(decimal minCost, decimal maxCost)
         {
             return AllJobs.FindAll((job) =>

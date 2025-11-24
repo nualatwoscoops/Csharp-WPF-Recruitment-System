@@ -98,16 +98,16 @@ namespace Recruitment_App_Assignment
 
         }
 
-        // Handles logic for loading Contractors to the list
-        private void Button_Load_Contractors_Click(object sender, RoutedEventArgs e)
-        {
-            Contractors_ListBox.ItemsSource = manager.GetAllContractors();
-            //foreach (Contractor contractor in manager.GetAllContractors())
-            //{
-            //    Contractors_ListBox.Items.Add(contractor);
-            //}
-            Contractors_ListBox.Items.Refresh();
-        }
+        // UPDATED: (DELETE?) Handled logic for loading Contractors to the list 
+        //private void Button_Load_Contractors_Click(object sender, RoutedEventArgs e)
+        //{
+        //    Contractors_ListBox.ItemsSource = manager.GetAllContractors();
+        //    //foreach (Contractor contractor in manager.GetAllContractors())
+        //    //{
+        //    //    Contractors_ListBox.Items.Add(contractor);
+        //    //}
+        //    Contractors_ListBox.Items.Refresh();
+        //}
 
         // Handles logic for removing a Contractor
         private void Button_Remove_Contractors_Click(object sender, RoutedEventArgs e)
@@ -267,7 +267,7 @@ namespace Recruitment_App_Assignment
         }
 
         //Handles Job Filter Combo Box 
-        private void JobFilter_ComboBoz_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void JobFilter_ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if ((int)JobFilter_ComboBox.SelectedItem == -1)
             {
