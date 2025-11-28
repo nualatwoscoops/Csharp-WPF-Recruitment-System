@@ -19,7 +19,7 @@
         <TextBox x:Name="FirstNameBox" HorizontalAlignment="Left" Height="26" Margin="102,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119"/>
         <TextBox x:Name="LastNameBox" HorizontalAlignment="Left" Height="26" Margin="102,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119"/>
         <DatePicker x:Name="StartDatePicker" HorizontalAlignment="Left" Margin="102,96,0,0" VerticalAlignment="Top" Height="35" Width="119"/>
-        <ComboBox x:Name="HourlyRate_ComboBox" HorizontalAlignment="Left" Margin="102,138,0,0" VerticalAlignment="Top" Width="119" ItemsSource="{Binding StandardHourlyRates}" SelectedIndex="0"/>
+        <ComboBox x:Name="HourlyRate_ComboBox" HorizontalAlignment="Left" Margin="102,138,0,0" VerticalAlignment="Top" Width="119" ItemsSource="{Binding StandardHourlyRates}" SelectedIndex="0" SelectionChanged="HourlyRate_ComboBox_SelectionChanged"/>
         <Button x:Name="Button_AddContractor" Content="Add Contractor" HorizontalAlignment="Left" Margin="102,170,0,0" VerticalAlignment="Top" Width="119" Click="Button_AddContractor_Click" Height="27"/>
 
         <!-- Contractor Filters -->

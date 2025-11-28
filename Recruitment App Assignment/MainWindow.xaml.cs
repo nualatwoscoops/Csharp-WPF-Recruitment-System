@@ -60,22 +60,22 @@ namespace Recruitment_App_Assignment
 
             if (string.IsNullOrEmpty(FirstNameBox.Text))
             {
-                MessageBox.Show("Cannot be empty.", "Input Error");
+                MessageBox.Show("First name cannot be empty.", "Input Error");
                 return;
             }
             if (string.IsNullOrEmpty(LastNameBox.Text))
             {
-                MessageBox.Show("Cannot be empty.", "Input Error");
+                MessageBox.Show("Last name cannot be empty.", "Input Error");
                 return;
             }
             if (HourlyRate_ComboBox.SelectedItem == null)
             {
-                MessageBox.Show("Please make a valid selection.", "Input Error.");
+                MessageBox.Show("Please make a valid selection for Hourly Rate.", "Input Error.");
                 return;
             }
             if (StartDatePicker.SelectedDate == null)
             {
-                MessageBox.Show("Please make a valid selection.", "Input Error.");
+                MessageBox.Show("Please make a valid selection for date.", "Input Error.");
                 return;
             }
             Contractor newContractor = new Contractor();
@@ -269,13 +269,26 @@ namespace Recruitment_App_Assignment
         //Handles Job Filter Combo Box 
         private void JobFilter_ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if ((int)JobFilter_ComboBox.SelectedItem == -1)
+            if (JobFilter_ComboBox.SelectedIndex == -1)
+            {
+                return;
+            }
+
+            if (JobFilter_ComboBox.SelectedItem is int selectedIndex && selectedIndex == -1)
             {
                 return;
             }
             string selectedFilter = (JobFilter_ComboBox.SelectedItem as ComboBoxItem)?.Content.ToString();
+            
+            if (string.IsNullOrEmpty(selectedFilter))
+            {
+                return;
+            }
+            
             List<Job> filteredJobs = manager.FilterJobs(selectedFilter);
             Jobs_ListBox.ItemsSource = filteredJobs;
-        }       
+        }
+
+        
     }
 }
