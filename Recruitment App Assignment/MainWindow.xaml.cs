@@ -289,6 +289,9 @@ namespace Recruitment_App_Assignment
             Jobs_ListBox.ItemsSource = filteredJobs;
         }
 
-        
+        private void HourlyRate_ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

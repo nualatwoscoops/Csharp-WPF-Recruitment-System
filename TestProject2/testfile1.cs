@@ -21,22 +21,23 @@ namespace TestProject2
             //Assert
             Assert.AreEqual(1, recruitmentsystem.AllContractors.Count);
         }
-        
+        [TestMethod]
         public void TestRemoveContractor()
         {
-            //Arrange
-            var contractor = new Contractor();
-            var recruitmentsystem = new RecruitmentSystem();
-            
-            recruitmentsystem.AddContractor(contractor);
+            // Arrange
+            var contractor1 = new Contractor();
+            var contractor2 = new Contractor();
+            var recruitmentSystem = new RecruitmentSystem();
 
             // Act
-            recruitmentsystem.RemoveContractor(contractor);
+            recruitmentSystem.AddContractor(contractor1);
+            recruitmentSystem.AddContractor(contractor2);
+            recruitmentSystem.RemoveContractor(contractor1);
 
             // Assert
-            Assert.AreEqual(0, recruitmentsystem.AllContractors.Count);
+            Assert.AreEqual(1, recruitmentSystem.AllContractors.Count);
         }
-       
+        [TestMethod]
         //Checks if a job has been marked as completed/contractor IsAssigned = True/false
         public void TestJobComplete()
         {
@@ -67,29 +68,29 @@ namespace TestProject2
             Assert.AreEqual(true, contractor2.IsAssigned);
 
         }
-        
+        [TestMethod]
         //checks if contractor assigns to correct job
 
         public void TestContractorAssigns()
         {
             //Arrange
-            var contractor = new Contractor("Obi", "Wan" DateTime.Now, 100.0m);
+            var contractor = new Contractor("Obi", "Wan", DateTime.Now, 100.0m);
             var job = new Job();
 
             var recruitmentsystem = new RecruitmentSystem();
 
             //Act
-            recruitmentsystem.AssignContractorToJob(job, contractor);
+            recruitmentsystem.AssignContractorToJob(contractor, job);
 
             //Assert
             Assert.AreEqual(contractor, job.ContractorAssigned);
             Assert.AreEqual(true, contractor.IsAssigned);
                         
             }
-
+        [TestMethod]
         //tests if no contractor is assigned/null handles
 
-        public void TestNoAssignedContractor()
+        public void CompleteJob()
         {
             //Arrange
             var job = new Job();
@@ -104,37 +105,39 @@ namespace TestProject2
 
 
             //Assert
-            Assert.AreEqual(job.IsCompleted == true);
-            Assert.AreEqual(contractor.IsAssigned == null);
+            Assert.IsTrue(job.IsCompleted == true);
+            Assert.IsNull(contractor.IsAssigned);
         }
+        [TestMethod]
         //Checks that assigning a contractor doesn't complete a job
 
         public void TestAssignWontCompleteJob()
         {
+            //Arrange
             var job = new Job();
-            var contractor = new Contractor();
+            var contractor = new Contractor("C3", "PO", DateTime.Now, 100.0m);
             job.IsCompleted = false;
 
             var recruitmentsystem = new RecruitmentSystem();
 
             //Act
-            recruitmentsystem.AssignContractorToJob();
+            recruitmentsystem.AssignContractorToJob(contractor, job);
 
             //Assert
-            Assert.AreEqual(job.IsCompleted == false);
+            Assert.IsTrue(job.IsCompleted == false);
             Assert.AreEqual(contractor, job.ContractorAssigned);
             Assert.AreEqual(true, contractor.IsAssigned);
 
         }
-
+        [TestMethod]
         //checks if filtered jobs can correctly return a list of unassigned jobs
 
         public void TestFilteredJobsUnassignedJobs()
         {
-
-            var job1 = new Job("Destroy All Jedi", 500);
-            var job2 = new Job("Fix Xwing", 700);
-            var job3 = new Job("Painting", 800);
+            //Arrange
+            var job1 = new Job(1, "Destroy All Jedi", 500);
+            var job2 = new Job(2, "Fix Xwing", 700);
+            var job3 = new Job(3, "Painting", 800);
 
             var contractor1 = new Contractor("Darth", "Vader", DateTime.Now, 100.0m);
             var contractor2 = new Contractor("Obi", "Wan", DateTime.Now, 100.0m);
@@ -151,30 +154,35 @@ namespace TestProject2
 
 
             //Act
-            var result = RecruitmentSystem.FilterJobs("Unassigned Jobs");
+            var result = recruitmentsystem.FilterJobs("Unassigned Jobs");
 
             //Assert
-            Assert.IsTrue(2, result.Count);
+            Assert.AreEqual(1, result.Count);
+            Assert.IsTrue(result.Contains(job2));
 
         }
-
+        [TestMethod]
         //Checks if search cost method handles correctly 
 
         public void TestSearchJobsByCost()
         {
-            var job = new Job("Destroy All Jedi", 500);
-            var job2 = new Job("Fix Xwing", 700);
-            var job3 = new Job("Breathwork", 800);
+            var job = new Job(1, "Destroy All Jedi", 500);
+            var job2 = new Job(2, "Fix Xwing", 700);
+            var job3 = new Job(3, "Breathwork", 800);
 
             var recruitmentsystem = new RecruitmentSystem();
 
             recruitmentsystem.AllJobs.Add(job);
+            recruitmentsystem.AllJobs.Add(job2);
+            recruitmentsystem.AllJobs.Add(job3);  
 
             //Act 
-            recruitmentsystem.SearchJobsByCost(minCost, 600 maxCost, 900);
+            var result = recruitmentsystem.SearchJobsByCost(600, 900);
 
             //Assert
-            Assert.IsTrue(2, result.Count);
+            Assert.AreEqual(2, result.Count);
+            Assert.IsTrue(result.Contains(job2));
+            Assert.IsTrue(result.Contains(job));
 
         }
     }
